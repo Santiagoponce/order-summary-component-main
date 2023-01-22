@@ -7,8 +7,6 @@
 --Dark-blue: hsl(223, 47%, 23%);
 
 font-family: 'Red Hat Display', sans-serif;
-font-size: clamp(1rem,0.75rem + 1.5vw,2rem);
-
 }
 
 *{
@@ -20,18 +18,23 @@ img
 }
 body
 {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
     width: 100%;
     background-color: var(--Pale-blue);
-    padding: 1rem;
-}
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    padding: 1.5em;
 
+}
 
 .order-card
 {
-    margin: 3rem auto 5rem auto;
     background-color: white;
     border-radius: 25px;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -43,28 +46,29 @@ body
 
 .order-card__summary
 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
     text-align: center;
+    justify-content: space-around;
 }
 .order-card__summary > *
 {
-    margin:1.5rem auto 1.5rem auto;
-    max-inline-size: 85%;
     word-wrap: break-word;
 }
 
 .order-card__header
 {
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.4em;
+    
     color: var(--Dark-blue);
 }
 
 .order-card__info
 {
-    font-size: .9rem;
     color: var(--Desaturated-blue);
-    line-height: 1.5rem;   
-    max-inline-size: 17em;    
 }
 
 
@@ -77,10 +81,7 @@ body
     align-items: center;
     justify-content: space-around;
     color: var(--Desaturated-blue);
-    font-size: .8rem;
     background-color: var(--Very-pale-blue);
-    padding: .5rem;
-    border-radius: .5rem;
 }
 
 .order-card__subscription-plan::before
@@ -91,7 +92,6 @@ body
 .order-card__subscription-name
 {
     font-weight: 900;
-    line-height: 1.5rem;
     color: var(--Dark-blue);
 }
 
@@ -119,12 +119,8 @@ data[class~=euro]::before
 
 .order-card__nav >*
 {
-   padding: .5rem;
-   padding: 1rem;
-   border-radius: .5rem;
    text-decoration: none;
    font-weight: 900;
-   font-size: .8rem;
 }
 
 .order-card__button-proceed
