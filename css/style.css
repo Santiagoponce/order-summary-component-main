@@ -8,7 +8,10 @@
 
 font-family: 'Red Hat Display', sans-serif;
 }
-
+a
+{
+    text-decoration: none;
+}
 *{
     box-sizing: border-box;
 }
@@ -20,23 +23,26 @@ body
 {   
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     min-height: 100vh;
     width: 100%;
+    
     background-color: var(--Pale-blue);
-    background-image: url("../images/pattern-background-desktop.svg");
-    background-repeat: no-repeat;
+    background-image: url("../images/pattern-background-mobile.svg");
     padding: 1.5em;
-
+    background-repeat: repeat-x;
 }
 
 .order-card
 {
+    margin-top: 2em;
     background-color: white;
     border-radius: 25px;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
+    gap: 2em;    
 }
 
 .order-card__ilustration
@@ -46,32 +52,30 @@ body
 
 .order-card__summary
 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
     text-align: center;
-    justify-content: space-around;
+    margin: 0 1.5em 1em 1.5em;
+    word-wrap: break-word;
 }
 .order-card__summary > *
 {
-    word-wrap: break-word;
+    margin:0 auto 0 auto;
 }
 
 .order-card__header
 {
     font-weight: 900;
     font-size: 1.4em;
-    
+    margin-bottom: .9em;
     color: var(--Dark-blue);
 }
 
 .order-card__info
 {
     color: var(--Desaturated-blue);
+    line-height: 1.5em;
+    max-inline-size: 17em;
+    margin-bottom: 1.5em;
 }
-
-
 
 
 .order-card__subscription-plan
@@ -82,6 +86,11 @@ body
     justify-content: space-around;
     color: var(--Desaturated-blue);
     background-color: var(--Very-pale-blue);
+    padding: .8em;
+    margin-bottom: 1.5em;
+    border-radius: .8em;
+    font-size: .9em;
+    line-height: 1.5em;
 }
 
 .order-card__subscription-plan::before
@@ -95,6 +104,11 @@ body
     color: var(--Dark-blue);
 }
 
+.order-card__subscription-change
+{
+    font-weight: 600;
+    font-size: .9em;
+}
 
 .order-card__subscription-price[class~=dolar]::before
 {
@@ -121,6 +135,10 @@ data[class~=euro]::before
 {
    text-decoration: none;
    font-weight: 900;
+   font-size: .9em;
+   border-radius: .8em;
+   padding: 1.3em;
+
 }
 
 .order-card__button-proceed
@@ -133,4 +151,25 @@ data[class~=euro]::before
 .order-card__button-cancel
 {
    color: var(--Desaturated-blue);
+
+}
+
+.attribution
+{
+    font-size: .5rem;
+}
+.attribution a
+{
+    font-weight: 700;
+    color: var(--Dark-blue);
+}
+
+
+
+@media screen and (min-width:30em){
+
+    body
+{   
+    background-image: url("../images/pattern-background-desktop.svg");
+}
 }
