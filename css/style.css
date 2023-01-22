@@ -1,0 +1,140 @@
+:root
+{
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+
+font-family: 'Red Hat Display', sans-serif;
+font-size: clamp(1rem,0.75rem + 1.5vw,2rem);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+img
+{
+    max-inline-size: 100%;
+}
+body
+{   
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--Pale-blue);
+    padding: 1rem;
+}
+
+
+.order-card
+{
+    margin: 3rem auto 5rem auto;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-card__ilustration
+{
+    border-radius: 25px 25px 0 0;
+}
+
+.order-card__summary
+{
+    text-align: center;
+}
+.order-card__summary > *
+{
+    margin:1.5rem auto 1.5rem auto;
+    max-inline-size: 85%;
+    word-wrap: break-word;
+}
+
+.order-card__header
+{
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--Dark-blue);
+}
+
+.order-card__info
+{
+    font-size: .9rem;
+    color: var(--Desaturated-blue);
+    line-height: 1.5rem;   
+    max-inline-size: 17em;    
+}
+
+
+
+
+.order-card__subscription-plan
+{
+    display: flex;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--Desaturated-blue);
+    font-size: .8rem;
+    background-color: var(--Very-pale-blue);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.order-card__subscription-plan::before
+{
+    content: url("../images/icon-music.svg");
+}
+
+.order-card__subscription-name
+{
+    font-weight: 900;
+    line-height: 1.5rem;
+    color: var(--Dark-blue);
+}
+
+
+.order-card__subscription-price[class~=dolar]::before
+{
+    content: '$';
+}
+data[class~=euro]::before
+{
+    content: '€';
+}
+
+.order-card__subscription-period::before
+{
+    content: '/';
+}
+
+
+.order-card__nav
+ {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-card__nav >*
+{
+   padding: .5rem;
+   padding: 1rem;
+   border-radius: .5rem;
+   text-decoration: none;
+   font-weight: 900;
+   font-size: .8rem;
+}
+
+.order-card__button-proceed
+{
+   background-color: var(--Bright-blue);
+   color: white;
+   box-shadow: 0 10px 20px var(--Pale-blue);
+}
+
+.order-card__button-cancel
+{
+   color: var(--Desaturated-blue);
+}

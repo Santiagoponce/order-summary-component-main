@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Order summary card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,19 +16,18 @@
   <article class="order-card">
 
     <img class="order-card__ilustration" alt="" src="images/illustration-hero.svg">
-
     <section class="order-card__summary">
       <h1 class="order-card__header">Order Summary</h1>
       <p class="order-card__info">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
 
       
       <div class="order-card__subscription-plan">
-        <p class="order-card__subscription-name">annual plan</p>
-
-        <data class="order-card__subscription-price dolar" value="59.99">59.99</data>
-        <time class="order-card__subscription-period" datetime="P365D">year</time>
-
-        <a href="subscription-plan.html"class="order-card__subscription-change"></a>
+        <div class="order-card__subscription-info">
+          <h2 class="order-card__subscription-name">annual plan</h2>
+          <data class="order-card__subscription-price euro" value="59.99">59.99</data>
+          <time class="order-card__subscription-period" datetime="P365D">year</time>
+        </div>
+        <a href="subscription-plan.html"class="order-card__subscription-change">change</a>
       </div>
     
       <div class="order-card__nav">
