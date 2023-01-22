@@ -3,35 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-  Order Summary
+<body>  
+  <article class="order-card">
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <img class="order-card__ilustration" alt="" src="images/illustration-hero.svg">
 
-  Annual Plan
-  $59.99/year
+    <section class="order-card__summary">
+      <h1 class="order-card__header">Order Summary</h1>
+      <p class="order-card__info">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
 
-  Change
+      
+      <div class="order-card__subscription-plan">
+        <p class="order-card__subscription-name">annual plan</p>
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <data class="order-card__subscription-price dolar" value="59.99">59.99</data>
+        <time class="order-card__subscription-period" datetime="P365D">year</time>
+
+        <a href="subscription-plan.html"class="order-card__subscription-change"></a>
+      </div>
+    
+      <div class="order-card__nav">
+        <!-- Usé <a> y no <button> ya que el comportamiento buscado es una re-direccion -->
+        <a href="#"role="button" class="order-card__button-proceed">Proceed to Payment</a>
+        <a href="#"role="button" class="order-card__button-cancel">Cancel Order</a>
+      </div>
+
+    </section>
+
+  </article>
 </body>
 </html>
+
